@@ -1,0 +1,26 @@
+<ion-view view-title="Grocery List">
+    <ion-content class="padding">
+
+        <ion-list>
+            <button class="button button-block button-outline button-balanced icon ion-android-delete" ng-click="removeItem($index)">&nbsp;&nbsp;Delete Completed Groceries</button>
+            <ion-item class="item-checkbox" ng-repeat="item in items track by $index" ng-show="item != undefined">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="item.checked" ng-change="checkAlerts($index)">
+                </label>
+                <span class="checked-{{item.checked}}">{{item.itemName}}</span>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+    <form class="bar bar-footer bar-balanced item-input-inset" ng-submit="add()">
+        <label class="item-input-wrapper">
+            <input ng-model="groceryItem" type="text" placeholder="Enter grocery item here...">
+        </label>
+        <button class="button" ng-click="sendItem()">
+            Add Item
+        </button>
+    </form>
+
+
+</ion-view>

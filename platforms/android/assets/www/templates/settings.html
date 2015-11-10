@@ -1,0 +1,18 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Settings</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeSettings()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="list">
+
+            <ion-toggle ng-model="vibration.checked" toggle-class="toggle-balanced" ng-click="enableVibration()">Vibration Alert</ion-toggle>
+            <ion-toggle ng-model="notification.checked" toggle-class="toggle-balanced" click="enableNotification()">Notification Alert</ion-toggle>
+
+        </div>
+
+    </ion-content>
+</ion-modal-view>

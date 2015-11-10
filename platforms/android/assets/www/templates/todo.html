@@ -1,0 +1,26 @@
+<!-- must keep these 2 headings, but can replace the body -->
+<ion-view view-title="To Do List">
+    <ion-content class="padding">
+
+        <ion-list>
+            <button class="button button-block button-outline button-royal icon ion-android-delete" ng-click="removeTask($index)">&nbsp;&nbsp;Delete Completed Tasks</button>
+            <ion-item class="item-checkbox" ng-repeat="task in tasks track by $index" ng-show="task != undefined">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="task.checked" ng-change="checkAlerts($index)">
+                </label>
+                <span class="checked-{{task.checked}}">{{task.taskName}}</span>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+    <form class="bar bar-footer bar-royal item-input-inset" ng-submit="add()">
+        <label class="item-input-wrapper">
+            <input ng-model="todoTask" type="text" placeholder="Enter task here...">
+        </label>
+        <button class="button" ng-click="sendTask()">
+            Add Task
+        </button>
+    </form>
+
+</ion-view>

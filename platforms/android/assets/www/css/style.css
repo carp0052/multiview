@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+
+.checked-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.menu-defaults .item {
+    color: #FCFCFC;
+    margin-bottom: 2px;
+    border: none;
+}
+
+.setting {
+    background-color: #393939;
+}
+
+.todoBackground {
+    background-color: #886aea;
+}
+
+.groceryBackground {
+    background-color: #33cd5f;
+}
+
+.giftBackground {
+    background-color: #387ef5;
+}
+
+
+/*Ion-item adds item-complex and an inner div, .item-content*/
+
+.menu-defaults .item-complex .item-content {
+    background-color: transparent;
+}
+
+.item-input-wrapper {
+    background-color: white;
+}

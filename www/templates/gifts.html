@@ -1,0 +1,25 @@
+<ion-view view-title="Gift List">
+    <ion-content class="padding">
+
+        <ion-list>
+            <button class="button button-block button-outline icon ion-android-delete button-positive" ng-click="removeGift($index)">&nbsp;&nbsp;Delete Completed Gifts</button>
+            <ion-item class="item-checkbox" ng-repeat="gift in gifts track by $index" ng-show="gift != undefined">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="gift.checked" ng-change="checkAlerts($index)">
+                </label>
+                <span class="checked-{{gift.checked}}">{{gift.giftName}}</span>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+    <form class="bar bar-footer bar-positive item-input-inset" ng-submit="add()">
+        <label class="item-input-wrapper">
+            <input ng-model="giftList" type="text" placeholder="Enter gift idea here...">
+        </label>
+        <button class="button" ng-click="sendGift()">
+            Add Gift
+        </button>
+    </form>
+
+</ion-view>
